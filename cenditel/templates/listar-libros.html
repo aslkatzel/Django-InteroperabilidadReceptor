@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block titulo %}Lista de Libros{% endblock %}
+{% block cuerpo %}
+<table align="center">
+    <style>
+        table, th, td 
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+    
+    <tr>
+        <h3 align="center">Libros</h3>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Fecha de Publicación</th>
+        <th>¿Realizada en CENDITEL?</th>
+        <th>URL</th>
+    </tr>
+    {% for libro in libros %}
+    <tr>
+        <th>{{ libro.cod_lib }}</th>
+        <th>{{ libro.lib_nom }}</th>
+        <th>{{ libro.lib_date }}</th>
+        <th>{{ libro.lib_cenditel }}</th>
+        <th>{{ libro.lib_url }}</th>
+    </tr>
+    {% endfor %}  
+</table>
+
+{% endblock %}

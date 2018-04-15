@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Acceso Usuario{% endblock %}
+{% block content %}
+    {% if form.errors %}
+        <p>Usuario o contraseña incorrectos, pruebe de nuevo.</p>
+    {% endif %}
+    <img src="/static/images/cenditel.png" width="175px" height="85px"/>
+    <form class="form" method="post" action="." >
+        {% csrf_token %}
+        <input type="text" placeholder="Usuario" name="username">
+        <input type="password" placeholder="Contraseña" name="password">
+        <button type="submit"  value="Login" id="login-button">Ingresar</button>
+        <!--<<button type="button" onclick="window.location.href='/register/' ">Register</button>-->
+        <input type="hidden" name="next" value="/index" />
+    </form>
+{% endblock %}

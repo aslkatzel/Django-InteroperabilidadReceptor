@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block titulo %}Lista de Proyectos{% endblock %}
+{% block cuerpo %}
+<table align="center">
+    <style>
+        table, th, td 
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+    
+    <tr>
+        <h3 align="center">Proyectos</h3>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Fecha de Inicio</th>
+        <th>Fecha Culminación</th>
+        <th>¿Pertenece al POA?</th>
+    </tr>
+    {% for proyecto in proyectos %}
+    <tr>
+        <th>{{ proyecto.cod_pto }}</th>
+        <th>{{ proyecto.pto_nom }}</th>
+        <th>{{ proyecto.pto_date_ini }}</th>
+        <th>{{ proyecto.pto_date_fin }}</th>
+        <th>{{ proyecto.pto_poa }}</th>
+    </tr>
+    {% endfor %}  
+</table>
+
+{% endblock %}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% load staticfiles %}
+    <link rel="icon" href="{% static 'img/cenditel-logo.png' %}">
+    <title>
+      {% block titulo %}Sistema Interoperabilidad{% endblock %}
+    </title>
+    <!-- Bootstrap Styles - css
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
+    <!-- Others - js
+    ================================================== -->
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+    <script src="{% static 'js/holder.min.js' %}"></script>
+    <!-- Jquery - js
+    ================================================== -->
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/jquery-1.12.4.js' %}"></script>
+    <!-- Bootstrap - js
+    ================================================== -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- Bug fix - js
+    ================================================== -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+    <!-- DatePicker
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'datepicker/css/jquery-ui.css' %}" type="text/css"/>
+    <script src="{% static 'datepicker/jquery-ui.js' %}" type="text/javascript"></script>
+    <!-- DataTables JS
+    ================================================== -->
+    <script src="{% static 'datatables/js/jquery.dataTables.min.js' %}" type="text/javascript"></script>
+    <link href="{% static 'datatables/css/jquery.dataTables.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- Scripts - js
+    ================================================== -->
+    <script src="{% static 'js/scripts.js' %}" type="text/javascript"></script>
+    <!-- Import CSS files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'datatables/css/jquery.dataTables.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'datatables/css/dataTables.min.css' %}">
+    <!-- Import JS files -->  
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/jquery.dataTables.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/dataTables.buttons.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/buttons.flash.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/jszip.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/pdfmake.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/vfs_fonts.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/buttons.html5.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/buttons.print.min.js' %}"></script>
+    <!-- Styles - css
+    ================================================== -->
+    <link href="{% static 'css/theme.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!-- navbar cintillo
+    ================================================== -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-cintillo">
+    <div class="container">
+      <div align="center">
+        <img class="cintillo_up" src="{% static 'img/cintillo_2018.png' %}" width="100%"></img>
+      </div>
+    </div>
+    </nav>
+    <!-- navbar cintillo end -->
+
+    <br />
+
+    <!-- Container class
+    ================================================== -->
+    <div class="container theme-showcase" role="main">
+
+      <div class="welll well_cuerpoo">
+        <img class="img-responsive" src="{% static 'img/cintillo_cenditel.png' %}" width="100%"></img>
+      </div>
+
+      <br />
+
+      <!-- Navbar class
+      ================================================== -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'index' %}">
+              <i class="glyphicon glyphicon-home"></i>
+              Inicio
+            </a>
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Analistas<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="{% url 'analistas' %}">
+                      <i class="glyphicon glyphicon-book"></i>
+                      Listar Analistas
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <!-- Cursos dropdown
+                  ================================================== -->
+                  <li>
+                    <a href="{% url 'cursos' %}">
+                      <i class="glyphicon glyphicon-book"></i>
+                      Listar Cursos
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eventos<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <!-- Eventos dropdown
+                  ================================================== -->
+                  <li>
+                    <a href="{% url 'eventos' %}">
+                      <i class="glyphicon glyphicon-book"></i>
+                      Listar Eventos
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Libros<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <!-- Libros dropdown
+                  ================================================== -->
+                  <li>
+                    <a href="{% url 'libros' %}">
+                      <i class="glyphicon glyphicon-book"></i>
+                      Listar Libros
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Participantes<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <!-- Participantes dropdown
+                  ================================================== -->
+                  <li>
+                    <a href="{% url 'participantes' %}">
+                      <i class="glyphicon glyphicon-book"></i>
+                      Listar Participantes
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proyectos<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <!-- Proyectos dropdown
+                  ================================================== -->
+                  <li>
+                    <a href="{% url 'proyectos' %}">
+                      <i class="glyphicon glyphicon-book"></i>
+                      Listar Proyectos
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Revistas<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <!-- Revistas dropdown
+                  ================================================== -->
+                  <li>
+                    <a href="{% url 'revistas' %}">
+                      <i class="glyphicon glyphicon-book"></i>
+                      Listar Revistas
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar class -->
+
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-success alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+              <strong>
+                {% if message.tags %}{% endif %}
+                {{ message }}
+              </strong>
+          </div>
+        {% endfor %}
+      {% endif %}
+      <!-- Cuerpo class
+      ================================================== -->
+      <div class="well well_cuerpo">
+        {% block cuerpo %}
+        <div align="justify">
+          <h1 align="center">
+            SISTEMA AUTOMATIZADO WEB PARA LA INTEROPERABILIDAD
+          </h1>
+          <p>
+            Tiene como finalidad la constante actualización de los datos referente a todas las actividades llevadas a cabo dentro de la Fundación, esto con el propósito de agilizar las solicitudes de información mensuales llevadas a cabo por el MPPEUTC y otros ministerios de los cuales debe rendir cuentas la Fundación CENDITEL.
+          </p>
+          <h3>
+            Definición del Marco de Interoperabilidad (MIO) para el Estado venezolano, que se publicó en marzo de 2011.
+          </h3>
+          <p>
+            La interoperabilidad (IO) es la capacidad que tiene el Estado para que sus organismos y demás entes intercambien datos entre sí, a través del uso de Tecnologías de Información. Esta interacción implica que las organizaciones involucradas compartan información y conocimiento en sus procesos interinstitucionales, mediante el intercambio electrónico de datos entre sus plataformas informáticas.
+          </p>
+          <p>
+            La IO es un medio que ofrece al Estado la posibilidad de disminuir los costos y la carga administrativa que demanda a las ciudadanas y ciudadanos, facilita el acceso a información actualizada, oportuna y confiable; fomenta la transparencia de los procedimientos administrativos, mejora la calidad de los datos públicos y da cumplimiento con lo establecido en la Ley Orgánica de la Administración Pública, informando a la población sobre los servicios, procedimientos y organización 
+            de la Administración Pública.
+          </p>
+        </div>
+        {% endblock %}
+      </div>
+      <!-- End Cuepo class -->
+      <br />
+      <br />
+    </div>
+    <!-- End Container class -->
+  </body>
+</html>
+                
+
+
+   
+
+        
+        
+        
+        
+
+ 

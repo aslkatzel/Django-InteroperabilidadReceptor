@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block titulo %}Lista de Participantes{% endblock %}
+{% block cuerpo %}
+<table align="center">
+    <style>
+        table, th, td 
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+    
+    <tr>
+        <h3 align="center">Participantes</h3>
+        <th>Código</th>
+        <th>Cédula</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Correo</th>
+    </tr>
+    {% for participante in participantes %}
+    <tr>
+        <th>{{ participante.cod_part }}</th>
+        <th>{{ participante.part_ced }}</th>
+        <th>{{ participante.part_nom }}</th>
+        <th>{{ participante.part_ape }}</th>
+        <th>{{ participante.part_cor }}</th>
+    </tr>
+    {% endfor %}  
+</table>
+
+{% endblock %}

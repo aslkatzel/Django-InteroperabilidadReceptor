@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% block titulo %}Lista de Analistas{% endblock %}
+{% block cuerpo %}
+<table align="center">
+    <style>
+        table, th, td 
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+    
+    <tr>
+        <h3 align="center">Analistas</h3>
+        <th>Código</th>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Proyectos</th>
+        <th>¿Activo?</th>
+    </tr>
+    {% for analista in analistas %}
+    <tr>
+        <th>{{ analista.cod_inv }}</th>
+        <th>{{ analista.inv_ced }}</th>
+        <th>{{ analista.inv_nom }}</th>
+        <th>{{ analista.inv_ape }}</th>
+        <th>{{ analista.get_inv_pro }}</th>
+        <th>{{ analista.inv_activo }}</th>
+    </tr>
+    {% endfor %}  
+</table>
+
+{% endblock %}

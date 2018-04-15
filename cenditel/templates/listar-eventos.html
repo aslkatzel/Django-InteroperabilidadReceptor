@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block titulo %}Lista de Eventos{% endblock %}
+{% block cuerpo %}
+<table align="center">
+    <style>
+        table, th, td 
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+    
+    <tr>
+        <h3 align="center">Eventos</h3>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Fecha Inicio</th>
+        <th>Fecha Fin</th>
+        <th>Lugar</th>
+        <th>Participantes</th>
+        <th>URL</th>
+    </tr>
+    {% for evento in eventos %}
+    <tr>
+        <th>{{ evento.cod_even }}</th>
+        <th>{{ evento.even_nom }}</th>
+        <th>{{ evento.even_date_ini }}</th>
+        <th>{{ evento.even_date_fin }}</th>
+        <th>{{ evento.even_site }}</th>
+        <th>{{ evento.get_even_part }}</th>
+        <th>{{ evento.even_url }}</th>
+    </tr>
+    {% endfor %}  
+</table>
+
+{% endblock %}

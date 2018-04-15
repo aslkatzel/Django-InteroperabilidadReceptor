@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load staticfiles %}
+{% block title %}Index Sistema{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}">
+    
+{% endblock %}
+{% block content %}
+    <nav>
+        <button type="button" onclick="window.location.href='/logout/' ">Logout</button>
+    </nav>
+    <h1> Bienvenido al sistema, {{ user.username }}, {{user.name}}</h1>
+    
+{% endblock %}

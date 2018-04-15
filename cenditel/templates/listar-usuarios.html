@@ -1,0 +1,27 @@
+<img src="/static/images/cabecera.png" align="center" />
+{% block content %}
+<h1 align="center">Pruebas de Funcionamiento</h1>
+<!-- Tabla Usuarios -->
+<style>
+    table, th, td 
+    {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+</style>
+<table align="center">
+    <tr>
+        <h3 align="center">Usuarios</h3>
+        <th>URL</th>
+        <th>Usuario</th>
+        <th>Correo</th>
+    </tr>
+    {% for usuario in usuarios %}
+    <tr>
+        <th>{{ usuario.url }}</th>
+        <th>{{ usuario.username }}</th>
+        <th>{{ usuario.email }}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
