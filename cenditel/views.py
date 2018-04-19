@@ -51,17 +51,6 @@ class ListarCurso(TemplateView):
         return super(ListarCurso,self).get_context_data(**kwargs)
 
 
-class ListarAnalista(TemplateView):
-    template_name = "listar-analistas.html"
-
-    def get_context_data(self,**kwargs):
-        header = {'Authorization':'Token '+API_TOKEN}
-        r = requests.get(API_URL+'analistas', headers=header)
-        data = r.json()
-        kwargs['analistas'] = data
-        return super(ListarAnalista,self).get_context_data(**kwargs)
-
-
 class ListarProyecto(TemplateView):
     template_name = "listar-proyectos.html"
 
@@ -93,3 +82,14 @@ class ListarParticipante(TemplateView):
         data = r.json()
         kwargs['participantes'] = data
         return super(ListarParticipante,self).get_context_data(**kwargs)
+
+
+class ListarInvestigador(TemplateView):
+    template_name = "listar-investigadores.html"
+
+    def get_context_data(self,**kwargs):
+        header = {'Authorization':'Token '+API_TOKEN}
+        r = requests.get(API_URL+'investigadores', headers=header)
+        data = r.json()
+        kwargs['investigadores'] = data
+        return super(ListarInvestigador,self).get_context_data(**kwargs)

@@ -136,4 +136,4 @@ STATICFILES_DIRS = (
 
 API_URL = 'http://localhost:8002/api_rest/'
 
-API_TOKEN = 'dfe3e17bebbc5eb4dce53d318d772fa8654412ed'
+API_TOKEN = '40dd96ecfae54282d5d7498a8b45e15cfb43bdb8'

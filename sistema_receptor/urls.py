@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from login.views import *
-from cenditel.views import ListarEvento, ListarUsuario, Index, ListarRevista, ListarCurso, ListarAnalista, ListarProyecto, ListarLibro, ListarParticipante
+from cenditel.views import ListarEvento, ListarUsuario, Index, ListarRevista, ListarCurso, ListarInvestigador, ListarProyecto, ListarLibro, ListarParticipante
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -31,7 +31,7 @@ urlpatterns = [
     url(r'^listar-usuarios/', ListarUsuario.as_view(), name='usuarios'),
     url(r'^listar-revistas/', ListarRevista.as_view(), name='revistas'),
     url(r'^listar-cursos/', ListarCurso.as_view(), name='cursos'),
-    url(r'^listar-analistas/', ListarAnalista.as_view(), name='analistas'),
+    url(r'^listar-investigadores/', ListarInvestigador.as_view(), name='investigadores'),
     url(r'^listar-proyectos/', ListarProyecto.as_view(), name='proyectos'),
     url(r'^listar-libros/', ListarLibro.as_view(), name='libros'),
     url(r'^listar-participantes/', ListarParticipante.as_view(), name='participantes'),

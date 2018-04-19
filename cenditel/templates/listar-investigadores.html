@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% block titulo %}Lista de Analistas{% endblock %}
+{% block cuerpo %}
+<table align="center">
+    <style>
+        table, th, td 
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+    
+    <tr>
+        <h3 align="center">Investigadores</h3>
+        <th>Código</th>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Proyectos</th>
+        <th>¿Activo?</th>
+    </tr>
+    {% for investigador in investigadores %}
+    <tr>
+        <th>{{ investigador.cod_in }}</th>
+        <th>{{ investigador.in_ced }}</th>
+        <th>{{ investigador.in_nom }}</th>
+        <th>{{ investigador.in_ape }}</th>
+        <th>{{ investigador.get_in_pro }}</th>
+        <th>{{ investigador.in_act }}</th>
+    </tr>
+    {% endfor %}  
+</table>
+
+{% endblock %}
