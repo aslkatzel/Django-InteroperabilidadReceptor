@@ -22,7 +22,7 @@
 
 ### Windows
     > git clone https://github.com/jhonssegura/django-sistema-receptor.git
-    > virtualenv entorno-virtual
+    > virtualenv entorno-receptor
     > pip install -r requirements/base.txt
     > python manage.py runserver
     
