@@ -11,7 +11,6 @@
 * Python 3.5.3
 * Django 1.9.5
 * Django REST 3.6.3
-* PostgreSQL
 
 ## Software Requerido
 
