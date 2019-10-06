@@ -15,22 +15,23 @@
 
 ## Software Requerido
 
-    # apt-get install python-pip python-virtualenv
+### GNU/Linux
 
-    # apt-get install postgresql pgadmin3
+    # apt-get install python-pip python-virtualenv
 
 ## Instalación del Sistema
 
-    $ git clone https://github.com/aslkatzel/Django-InteroperabilidadReceptor.git
+### Windows
+    > git clone https://github.com/jhonssegura/django-sistema-receptor.git
+    > virtualenv entorno-virtual
+    > pip install -r requirements/base.txt
+    > python manage.py runserver
+    
+### GNU/Linux
 
+    $ git clone https://github.com/jhonssegura/django-sistema-receptor.git
     $ virtualenv -p /usr/bin/python3 entorno-receptor
-
     $ pip install -r requirements/base.txt
-
-    $ python manage.py migrate
-
-    $ python manage.py createsuperuser
-
     $ python manage.py runserver
 
 ## Configuración del Sistema
